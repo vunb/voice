@@ -16,6 +16,8 @@
         rate: 0.8,
         volume: 1
       });
+
+      document.getElementById('link').innerText = `https://texttospeech.responsivevoice.org/v1/text:synthesize?text=${text}&lang=vi&engine=g1&name=&pitch=0.5&rate=0.4&volume=1&key=vIrof7nI&gender=female`;
     }
   </script>
 
@@ -23,7 +25,10 @@
 
 <body>
   <script src="https://code.responsivevoice.org/responsivevoice.js?key=vIrof7nI"></script>
-  <input type="text" id="txtInput" />
+  <input type="text" id="txtInput" placeholder="Nhập vào văn bản vào đây!" />
+  <div>
+    Link download: <span id="link">?</span>
+  </div>
   <div>
     <button onclick="speak(document.getElementById('txtInput').value)" type="button" value="Play">Play</button>
   </div>
