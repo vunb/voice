@@ -7,11 +7,22 @@
   <title>Vunb Hello Voice</title>
   <meta name="description" content="Hello Voice">
   <meta name="author" content="vunb">
+  
+  <script>
+    function speak(text) {
+        text = text || 'Vui lòng nhập văn bản trước!';
+        responsiveVoice.speak(text);
+    }
+  </script>
 
 </head>
 
 <body>
   <script src="https://code.responsivevoice.org/responsivevoice.js?key=vIrof7nI"></script>
-  <p>vào cửa lấy bệnh phẩm</p>
+  <input type="text" id="txtInput" />
+  <div>
+    <button onclick="speak(document.getElementById('txtInput').value)" 
+type="button" value="Play">Play</button>
+  </div>
 </body>
 </html>
